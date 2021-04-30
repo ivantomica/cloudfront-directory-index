@@ -12,9 +12,9 @@ This lambda currently covers only basic needs I have for my private Hugo based w
 
 ### Installation
 
-0. create IAM role
-   a. attach AWSLambdaBasicExecutionRole policy to it
-   b. edit trust relationship, it should look somewhat like:
+- create IAM role
+  - attach AWSLambdaBasicExecutionRole policy to it
+  - edit trust relationship, it should look somewhat like:
    ```
    {
        "Version": "2012-10-17",
@@ -32,17 +32,17 @@ This lambda currently covers only basic needs I have for my private Hugo based w
        ]
    }
    ```
-1. package up lambda_handler.py into .zip file
-2. create lambda function in us-east-1 region (if you want to use it as Lambda@Edge)
-   a. author from scratch
-   b. when configuring function, use latest Python runtime
-   c. use existing execution role and select previously created IAM role
-3. open lambda and Upload from .zip file
-4. add trigger
-   a. select Cloudfront
-   b. click on Deploy to Lambda@Edge
-   c. select distribution
-   d. cache behaviour: *
-   e. cloudfront event: origin request
-   f. I acknowledge
-   g. Deploy
+- package up lambda_handler.py into .zip file
+- create lambda function in us-east-1 region (if you want to use it as Lambda@Edge)
+   - author from scratch
+   - when configuring function, use latest Python runtime
+   - use existing execution role and select previously created IAM role
+- open lambda and Upload from .zip file
+- add trigger
+   - select Cloudfront
+   - click on Deploy to Lambda@Edge
+   - select distribution
+   - cache behaviour: *
+   - cloudfront event: origin request
+   - I acknowledge
+   - Deploy
