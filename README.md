@@ -42,7 +42,7 @@ This lambda currently covers only basic needs I have for my private Hugo based w
    - select Cloudfront
    - click on Deploy to Lambda@Edge
    - select distribution
-   - cache behaviour: *
+   - cache behaviour: `*`
    - cloudfront event: origin request
    - I acknowledge
    - Deploy
