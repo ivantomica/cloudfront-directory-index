@@ -22,7 +22,7 @@ def lambda_handler(event, context):
         }
         return response
 
-    elif re.match('/[^/.]+$', uri):
+    elif re.search('\/[^\/\.]+$', uri):
         response = {
             'status': '301',
             'statusDescription': 'Found',
